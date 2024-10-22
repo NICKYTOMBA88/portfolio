@@ -49,19 +49,19 @@ header{
 }
 @media (max-width: 768px) {
     header {
-        flex-direction: column; /* Apilar los elementos verticalmente */
-        align-items: flex-start; /* Alinear todo a la izquierda */
+        flex-direction: column; 
+        align-items: flex-start;
         width: 100%;
     }
 
     .name {
-        font-size: 2.5rem; /* Ajuste de tamaño de fuente */
-        margin-bottom: 2%; /* Espacio entre nombre y redes sociales */
+        font-size: 2.5rem; 
+        margin-bottom: 2%; 
     }
 
     .social {
-        justify-content: flex-start; /* Alinear redes sociales a la izquierda */
-        gap: 13%; /* Reducir el espacio entre elementos */
+        justify-content: flex-start; 
+        gap: 13%; 
         margin-left: 2%;
     }
     .social a {
@@ -110,9 +110,9 @@ img{
     border-radius: 20px;
 }
  .contain h4{
-    writing-mode: vertical-rl; /* Texto vertical de arriba hacia abajo */
-    text-orientation: upright; /* Mantiene las letras orientadas correctamente */
-    font-size: 2rem; /* Tamaño del texto */
+    writing-mode: vertical-rl; 
+    text-orientation: upright; 
+    font-size: 2rem; 
     margin-right: 2%;
  }
  .contain p{
