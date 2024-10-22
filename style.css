@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+
+}
+body{
+    background-color: black;
+}
+header{
+    background-color: rgba(0, 0, 0, 0.92);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    box-shadow: 0 2px 6px rgba(0, 17, 255, 0.4); /* Sombra para darle profundidad */
+
+}
+.name{
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(12,0,255,1) 100%);
+    background-clip: text;
+    color: transparent;
+    margin-left: 2%;
+    display: flex;
+    font-family: "Crimson Text", serif;
+    font-size: 2.5rem;
+    letter-spacing: -2.5px;
+}
+.social{
+    display: flex;
+    justify-content: end;
+    gap: 10%;
+    margin-right: 5%;
+    font-family: "Space Grotesk", sans-serif; 
+   
+}
+.social a{
+    color: white;
+    padding: 5% ;
+    transition: all 0.7s;
+    
+}
+.social a:hover{
+    border-bottom:solid #0c00ff;
+    border-radius: 0.5rem;
+}
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Apilar los elementos verticalmente */
+        align-items: flex-start; /* Alinear todo a la izquierda */
+        width: 100%;
+    }
+
+    .name {
+        font-size: 2.5rem; /* Ajuste de tamaño de fuente */
+        margin-bottom: 2%; /* Espacio entre nombre y redes sociales */
+    }
+
+    .social {
+        justify-content: flex-start; /* Alinear redes sociales a la izquierda */
+        gap: 13%; /* Reducir el espacio entre elementos */
+        margin-left: 2%;
+    }
+    .social a {
+        padding: 3% 8%;
+    }
+}
+.presentacion{
+    font-family:"Space Grotesk", sans-serif; 
+    margin: 15% 2%;
+    color: #00aeef;
+    letter-spacing: 6px;
+    margin-bottom: 3%;
+}
+.biografia{
+    font-family:"Space Grotesk", sans-serif; 
+    margin: 0 2%;
+    color: white;
+    max-width: 60%;
+    font-size: 30px;
+}
+
+@media (max-width: 768px) {
+    .biografia{
+        max-width: 100%;
+        font-size: 15px;
+    }
+    .presentacion{
+        margin-top: 15%;
+    }
+
+}
+main{
+    display: flex;
+    margin: 10% 4%;
+    gap: 3rem;
+}
+.contain{
+color: white;
+display: flex;
+text-decoration: white;
+}
+img{
+    width: 40%;
+    height: auto;
+    margin-right: 3%;
+    border-radius: 20px;
+}
+ .contain h4{
+    writing-mode: vertical-rl; /* Texto vertical de arriba hacia abajo */
+    text-orientation: upright; /* Mantiene las letras orientadas correctamente */
+    font-size: 2rem; /* Tamaño del texto */
+    margin-right: 2%;
+ }
+ .contain p{
+    width: 100%;
+    font-family:"Space Grotesk", sans-serif; 
+    font-size: 2rem;
+ }
+ hr{
+    border: none; 
+    height: 1px;
+    background-color: #3498db; 
+    margin: 8% 0; 
+}
+ 
