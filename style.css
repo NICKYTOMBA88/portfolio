@@ -3,21 +3,35 @@
     padding: 0;
     margin: 0;
     text-decoration: none;
+    scroll-behavior: smooth;
 
 }
 body{
-    background-color: black;
+background-color: rgb(14, 13, 13);
 }
 header{
-    background-color: rgba(0, 0, 0, 0.92);
+    background-color: rgb(14, 13, 13);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    z-index: 1000;
+    z-index: 5;
     width: 100%;
     box-shadow: 0 2px 6px rgba(0, 17, 255, 0.4); /* Sombra para darle profundidad */
 
+}
+#menu-togle{display: none;}
+.menu-togle-label{
+    color: wheat;
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+}
+header img{
+    width: 4%;
+    height: auto;
+    background-color: rgba(240, 248, 255, 0.454);
+    border-radius: 100px;
 }
 .name{
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(12,0,255,1) 100%);
@@ -31,7 +45,7 @@ header{
 }
 .social{
     display: flex;
-    justify-content: end;
+    
     gap: 10%;
     margin-right: 5%;
     font-family: "Space Grotesk", sans-serif; 
@@ -53,20 +67,45 @@ header{
         align-items: flex-start;
         width: 100%;
     }
+    .menu-togle-label{
+        color: wheat;
 
+        cursor: pointer;
+        font-size: 30px;}
+    header img{
+        width: 4%;
+        height: auto;
+        margin-left: auto;
+        display: none;
+    }
     .name {
         font-size: 2.5rem; 
         margin-bottom: 2%; 
     }
 
     .social {
-        justify-content: flex-start; 
+        flex-direction: column; 
+        position: absolute;
+        height: calc(50px + 2rem);
+        right: 0;
+        width: 100%;
+        height: calc(100% - 50px - 2rem);
+        text-align: center;
+        z-index: 10;
         gap: 13%; 
         margin-left: 2%;
+        animation: menu 0.4s ease-out forwards;
+        display: none;
     }
     .social a {
         padding: 3% 8%;
     }
+    @keyframes menu {
+        from{transform: translateY(100%);}
+        to{transform: translateY(0%);}
+    }
+    #menu-togle:checked + .menu-togle-label + .social{display: flex;}
+    .menu-togle-label{display: block;}
 }
 .presentacion{
     font-family:"Space Grotesk", sans-serif; 
@@ -81,12 +120,14 @@ header{
     color: white;
     max-width: 60%;
     font-size: 30px;
+    text-align: justify;
 }
 
 @media (max-width: 768px) {
     .biografia{
         max-width: 100%;
         font-size: 15px;
+        text-align: justify;
     }
     .presentacion{
         margin-top: 15%;
@@ -99,9 +140,9 @@ main{
     gap: 3rem;
 }
 .contain{
-color: white;
-display: flex;
-text-decoration: white;
+    color: white;
+    display: flex;
+    text-decoration: white;
 }
 img{
     width: 40%;
@@ -119,6 +160,7 @@ img{
     width: 100%;
     font-family:"Space Grotesk", sans-serif; 
     font-size: 2rem;
+    text-align: justify;
  }
  hr{
     border: none; 
@@ -126,4 +168,54 @@ img{
     background-color: #3498db; 
     margin: 8% 0; 
 }
- 
+@media (max-width: 768px) {
+    .contain {
+        display: block; /* Cambia la disposición a bloque para que los elementos se apilen */
+    }
+
+    .contain img {
+        width: 100%; /* La imagen tomará el ancho completo */
+        height: auto;
+        margin-bottom: 1rem; /* Añade un espacio debajo de la imagen */
+    }
+
+    .contain h4 {
+        text-align: center;
+        margin-bottom: 1rem; 
+        writing-mode: horizontal-tb;
+    }
+
+    .contain p {
+        font-size: 1rem; 
+        text-align: justify; 
+    }
+}
+.programacion{
+text-align: center;
+}
+.conocimiento{
+    margin-bottom: 2rem;
+    color: aliceblue;
+    margin-right: 2rem;
+}
+.htmll{
+width: 10%;
+height: auto;
+}
+.cssl{
+    width: 8.5%;
+    height: auto;
+}
+.etiec{
+    color: antiquewhite;
+    font-family:"Space Grotesk", sans-serif; ;
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    margin-top: 3%;
+}                   
+@media (max-width: 768px) {
+    .etiec{
+        font-size: 1rem;
+    }   
+}
