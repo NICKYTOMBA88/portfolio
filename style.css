@@ -170,13 +170,13 @@ img{
 }
 @media (max-width: 768px) {
     .contain {
-        display: block; /* Cambia la disposición a bloque para que los elementos se apilen */
+        display: block; 
     }
 
     .contain img {
-        width: 100%; /* La imagen tomará el ancho completo */
+        width: 100%;
         height: auto;
-        margin-bottom: 1rem; /* Añade un espacio debajo de la imagen */
+        margin-bottom: 1rem; 
     }
 
     .contain h4 {
