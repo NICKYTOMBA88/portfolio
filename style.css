@@ -17,7 +17,7 @@ header{
     position: fixed;
     z-index: 5;
     width: 100%;
-    box-shadow: 0 2px 6px rgba(0, 17, 255, 0.4); /* Sombra para darle profundidad */
+    box-shadow: 0 2px 6px rgba(0, 17, 255, 0.4); 
 
 }
 #menu-togle{display: none;}
@@ -45,7 +45,7 @@ header img{
 }
 .social{
     display: flex;
-    
+    justify-content: end;
     gap: 10%;
     margin-right: 5%;
     font-family: "Space Grotesk", sans-serif; 
