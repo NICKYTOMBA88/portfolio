@@ -7,14 +7,16 @@
 
 }
 body{
-background-color: rgb(14, 13, 13);
+background-color: #0e0d0d;
+content-visibility: auto;
 }
 header{
     background-color: rgb(14, 13, 13);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    top: 0;
+    position: sticky;
     z-index: 5;
     width: 100%;
     box-shadow: 0 2px 6px rgba(0, 17, 255, 0.4); 
@@ -34,7 +36,7 @@ header img{
     border-radius: 100px;
 }
 .name{
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(12,0,255,1) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgb(23, 13, 215) 100%);
     background-clip: text;
     color: transparent;
     margin-left: 2%;
@@ -51,62 +53,19 @@ header img{
     font-family: "Space Grotesk", sans-serif; 
    
 }
+
 .social a{
     color: white;
     padding: 5% ;
     transition: all 0.7s;
     
 }
+
 .social a:hover{
     border-bottom:solid #0c00ff;
     border-radius: 0.5rem;
 }
-@media (max-width: 768px) {
-    header {
-        flex-direction: column; 
-        align-items: flex-start;
-        width: 100%;
-    }
-    .menu-togle-label{
-        color: wheat;
 
-        cursor: pointer;
-        font-size: 30px;}
-    header img{
-        width: 4%;
-        height: auto;
-        margin-left: auto;
-        display: none;
-    }
-    .name {
-        font-size: 2.5rem; 
-        margin-bottom: 2%; 
-    }
-
-    .social {
-        flex-direction: column; 
-        position: absolute;
-        height: calc(50px + 2rem);
-        right: 0;
-        width: 100%;
-        height: calc(100% - 50px - 2rem);
-        text-align: center;
-        z-index: 10;
-        gap: 13%; 
-        margin-left: 2%;
-        animation: menu 0.4s ease-out forwards;
-        display: none;
-    }
-    .social a {
-        padding: 3% 8%;
-    }
-    @keyframes menu {
-        from{transform: translateY(100%);}
-        to{transform: translateY(0%);}
-    }
-    #menu-togle:checked + .menu-togle-label + .social{display: flex;}
-    .menu-togle-label{display: block;}
-}
 .presentacion{
     font-family:"Space Grotesk", sans-serif; 
     margin: 15% 2%;
@@ -114,6 +73,7 @@ header img{
     letter-spacing: 6px;
     margin-bottom: 3%;
 }
+
 .biografia{
     font-family:"Space Grotesk", sans-serif; 
     margin: 0 2%;
@@ -123,60 +83,144 @@ header img{
     text-align: justify;
 }
 
-@media (max-width: 768px) {
-    .biografia{
-        max-width: 100%;
-        font-size: 15px;
-        text-align: justify;
-    }
-    .presentacion{
-        margin-top: 15%;
-    }
-
-}
 main{
     display: flex;
     margin: 10% 4%;
     gap: 3rem;
 }
+
 .contain{
     color: white;
     display: flex;
     text-decoration: white;
 }
+
 img{
     width: 40%;
     height: auto;
     margin-right: 3%;
     border-radius: 20px;
 }
+
  .contain h4{
     writing-mode: vertical-rl; 
     text-orientation: upright; 
     font-size: 2rem; 
     margin-right: 2%;
  }
+
  .contain p{
     width: 100%;
     font-family:"Space Grotesk", sans-serif; 
     font-size: 2rem;
     text-align: justify;
  }
+
  hr{
     border: none; 
     height: 1px;
     background-color: #3498db; 
     margin: 8% 0; 
 }
+
+.programacion{
+text-align: center;
+}
+
+.conocimiento{
+    margin-bottom: 2rem;
+    color: rgb(255, 255, 255);
+    margin-right: 2rem;
+}
+
+.htmll{
+width: 10%;
+height: auto;
+}
+
+.cssl{
+    width: 8.5%;
+    height: auto;
+}
+
+.etiec{
+    color: rgb(255, 255, 255);
+    font-family:"Space Grotesk", sans-serif; ;
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    margin-top: 3%;
+}                   
 @media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .menu-togle-label{
+        color: wheat;
+
+        cursor: pointer;
+        font-size: 30px;
+    }
+
+    header img{
+        width: 4%;
+        height: auto;
+        margin-left: auto;
+        display: none;
+    }
+
+    .name {
+        font-size: 2.5rem; 
+        margin-bottom: 2%; 
+    }
+
+    @keyframes menu {
+        from{transform: translateX(100%);}
+        to{transform: translateX(0%);}
+    }
+    .social {
+        flex-direction: column; 
+        position: absolute;
+        top: 6.6rem;
+        width: 110%;
+        text-align: center;
+        z-index: 10;
+        gap: 13%; 
+        margin-left: 2%;
+        animation: menu 0.4s ease-out forwards;
+        display: none;
+        background-color: rgba(23, 22, 20, 0.959);
+    }
+    .social a {
+        padding: 3% 8%;
+    }
+   
+    #menu-togle:checked + .menu-togle-label + .social{display: flex;}
+    .menu-togle-label{display: block;}
     .contain {
         display: block; 
     }
+    .biografia{
+        max-width: 100%;
+        font-size: 20px;
+        text-align: justify;
+        padding-inline: 10%;
+        margin-bottom: 30%;
+    }
+    .presentacion{
+        margin-top: 15%;
+        font-size: 2.5rem;
+        margin-left: 12%;
+    }
 
     .contain img {
-        width: 100%;
+        width: 40%;
         height: auto;
         margin-bottom: 1rem; 
+        margin-left: 29%;
     }
 
     .contain h4 {
@@ -188,53 +232,51 @@ img{
     .contain p {
         font-size: 1rem; 
         text-align: justify; 
+        width: 100%;
+        font-size: 20px;
+        padding-inline: 10%;
+    } 
+
+    .etiec{
+        font-size: 20px;
+        text-align: justify;
+        padding-inline: 10%;
+    }   
+
+    .conocimiento{
+        font-size: 1.5rem;
+        text-align: justify;
+        padding-inline: 10%;
+        text-align: center;
+    }
+    .htmll{
+        width: 20%;
+        height: auto;
+    }
+    .cssl{
+        width: 17%;
+        height: auto;
     }
 }
-.programacion{
-text-align: center;
-}
-.conocimiento{
-    margin-bottom: 2rem;
-    color: aliceblue;
-    margin-right: 2rem;
-}
-.htmll{
-width: 10%;
-height: auto;
-}
-.cssl{
-    width: 8.5%;
-    height: auto;
-}
-.etiec{
-    color: antiquewhite;
-    font-family:"Space Grotesk", sans-serif; ;
-    font-size: 30px;
-    display: flex;
-    text-align: center;
-    margin-top: 3%;
-}                   
-@media (max-width: 768px) {
-    .etiec{
-        font-size: 1rem;
-    }   
-}
 footer {
-    background-color: #000; 
-    padding: 20px;
+    background: rgb(3,13,215);
+    background: linear-gradient(0deg, rgba(3,13,215,1) 0%, rgba(14,13,13,1) 43%);
     text-align: center;
+    
 }
 
 footer p{
     text-align: center;
-    color: whitesmoke;
-    font-size: 3rem;
-    margin-bottom: 2rem;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-family: "Crimson Text", serif;
 }
 .social-icons {
     display: flex;
     justify-content: center; 
     gap: 20px; 
+    margin-bottom: 10px;
 }
 
 .social-icons a {
@@ -243,9 +285,7 @@ footer p{
     transition: color 0.3s; 
 }
 
-.social-icons a:hover {
-    color: #3498db; 
-}
+
 
 
 .instagram:hover {
@@ -257,5 +297,5 @@ footer p{
 }
 
 .github:hover {
-    color: #333;
+    color: #188e2c;
 }
